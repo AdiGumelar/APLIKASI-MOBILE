@@ -10,61 +10,68 @@
     android:paddingHorizontal="24dp">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logo"
+        android:contentDescription="@string/desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/logo_2"
-        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteX="169dp"
         tools:layout_editor_absoluteY="82dp"
         android:layout_gravity="center"
-        android:layout_marginTop="82dp"/>
+        android:layout_marginTop="82dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/blue"
-        android:textSize="32sp"
-        android:fontFamily="@font/poppins_bold"
-        android:text="LOGIN"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="53dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/login"
+        android:textColor="@color/blue"
+        android:textSize="32sp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableStart="@drawable/_icon__profile_circle_"
+        android:drawablePadding="8dp"
         android:fontFamily="@font/poppins"
         android:textColor="@color/grey"
         android:textSize="15sp"
         android:padding="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="41dp"
         android:background="@drawable/bg_editteks"
-        android:hint="username" />
+        android:hint="@string/username"
+        android:inputType="text"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:drawableStart="@drawable/_icon__padlock_"
+        android:drawablePadding="8dp"
         android:fontFamily="@font/poppins"
         android:textSize="15sp"
         android:padding="10dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="41dp"
         android:background="@drawable/bg_editteks"
-        android:hint="password" />
+        android:hint="@string/password"
+        android:inputType="textPassword"/>
 
     <Button
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="41dp"
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Login" />
+        android:text="@string/login_small" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lupa Password?"
+        android:text="@string/forgot_pass"
         android:layout_gravity="center"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/poppins_semibold"
         android:textSize="12.75sp"
         android:textColor="@color/grey" />
@@ -72,9 +79,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Atau login dengan"
+        android:text="@string/other_option"
         android:layout_gravity="center"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/poppins_semibold"
         android:textSize="12.75sp"
         android:textColor="@color/black"/>
@@ -82,16 +89,17 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
 
         <Button
             style="@style/Widget.Material3.Button.OutlinedButton.Icon"
             android:layout_width="135dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Facebook"
-
+            android:text="@string/facebook"
+            android:layout_marginEnd="30dp"
             android:textColor="@color/black" />
 
         <Button
@@ -100,20 +108,20 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/poppins_semibold"
-            android:text="Google"
+            android:text="@string/google"
             android:textColor="@color/black" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        >
+        android:layout_marginTop="34dp"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Belum punya akun? "
+            android:text="@string/belum_punya_akun"
             android:layout_gravity="center"
             android:fontFamily="@font/poppins_semibold"
             android:textSize="12.75sp"
@@ -122,7 +130,8 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Registrasi"
+            android:text="@string/register_small"
+            android:layout_marginStart="4dp"
             android:layout_gravity="center"
             android:fontFamily="@font/poppins_semibold"
             android:textSize="12.75sp"
@@ -131,4 +140,3 @@
 
 
 </LinearLayout>
-
