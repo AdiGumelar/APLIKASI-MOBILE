@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.loginPage"
+    tools:context=".ui.LoginPage"
     android:orientation="vertical"
     android:paddingHorizontal="24dp">
 
@@ -42,12 +42,13 @@
         android:layout_marginTop="41dp"
         android:background="@drawable/bg_editteks"
         android:hint="@string/username"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:autofillHints="username"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableStart="@drawable/_icon__padlock_"
+        android:drawableStart="@drawable/baseline_lock_24"
         android:drawablePadding="8dp"
         android:fontFamily="@font/poppins"
         android:textSize="15sp"
@@ -55,7 +56,8 @@
         android:layout_marginTop="41dp"
         android:background="@drawable/bg_editteks"
         android:hint="@string/password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:autofillHints="password"/>
 
     <Button
         android:layout_width="135dp"
@@ -128,6 +130,7 @@
             android:textColor="@color/black"/>
 
         <TextView
+            android:id="@+id/regiser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/register_small"
