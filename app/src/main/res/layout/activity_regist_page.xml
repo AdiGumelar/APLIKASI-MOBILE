@@ -7,18 +7,19 @@
     android:layout_height="match_parent"
     tools:context=".ui.LoginPage"
     android:orientation="vertical"
-    android:paddingHorizontal="24dp">
+    android:paddingHorizontal="24dp"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/logo"
-        android:contentDescription="@string/desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo_2"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="82dp"
+        android:layout_width="91dp"
+        android:layout_height="109dp"
         android:layout_gravity="center"
-        android:layout_marginTop="82dp" />
+        android:layout_marginTop="82dp"
+        android:contentDescription="@string/desc"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="82dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -42,7 +43,8 @@
         android:layout_marginTop="41dp"
         android:background="@drawable/bg_editteks"
         android:hint="@string/username"
-        android:inputType="text"/>
+        android:inputType="text"
+        android:autofillHints="username"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -55,7 +57,8 @@
         android:layout_marginTop="41dp"
         android:background="@drawable/bg_editteks"
         android:hint="@string/email"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress"
+        android:autofillHints="emailAddress"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -68,7 +71,8 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/bg_editteks"
         android:hint="@string/password"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword"
+        android:autofillHints="password"/>
 
     <Button
         android:layout_width="135dp"

@@ -7,14 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".ui.LoginPage"
     android:orientation="vertical"
-    android:paddingHorizontal="24dp">
+    android:paddingHorizontal="24dp"
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/logo"
         android:contentDescription="@string/desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo_2"
+        android:layout_width="92dp"
+        android:layout_height="109dp"
+        app:srcCompat="@drawable/logo"
         tools:layout_editor_absoluteX="169dp"
         tools:layout_editor_absoluteY="82dp"
         android:layout_gravity="center"

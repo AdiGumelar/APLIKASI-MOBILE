@@ -16,6 +16,7 @@ class LoginPage : AppCompatActivity() {
         textClick.setOnClickListener {
             val intent = Intent(this, RegistPage::class.java)
             startActivity(intent)
+            overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out)
         }
     }
 }
