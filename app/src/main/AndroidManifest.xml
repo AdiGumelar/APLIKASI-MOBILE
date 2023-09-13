@@ -12,8 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LatihanMobileApp"
         tools:targetApi="31">
+        <activity android:name=".ui.RegistPage"></activity>
+        <activity android:name=".ui.LoginPage"></activity>
         <activity
-            android:name=".ui.RegistPage"
+            android:name=".ui.splashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

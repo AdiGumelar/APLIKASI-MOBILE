@@ -13,22 +13,56 @@
         android:paddingHorizontal="24dp"
         android:background="@color/white">
 
-        <ImageView
-            android:id="@+id/logo"
-            android:contentDescription="@string/desc"
-            android:layout_width="92dp"
-            android:layout_height="109dp"
-            app:srcCompat="@drawable/logo"
-            tools:layout_editor_absoluteX="169dp"
-            tools:layout_editor_absoluteY="82dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="82dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="90dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:contentDescription="@string/desc"
+                app:srcCompat="@drawable/logo_2"
+                tools:layout_editor_absoluteX="169dp"
+                tools:layout_editor_absoluteY="82dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Market Plus"
+                    android:textSize="34sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/black">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make Your Life Easy"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:textColor="@color/black">
+                </TextView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="53dp"
+            android:layout_marginTop="43dp"
             android:fontFamily="@font/poppins_bold"
             android:text="@string/login"
             android:textColor="@color/blue"
@@ -70,7 +104,8 @@
             android:layout_marginTop="41dp"
             android:backgroundTint="@color/blue"
             android:fontFamily="@font/poppins_semibold"
-            android:text="@string/login_small" />
+            android:text="@string/login_small"
+            android:textColor="@color/white"/>
 
         <TextView
             android:layout_width="wrap_content"
