@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">LatihanMobileApp</string>
+    <string name="app_name">Market Plus</string>
     <string name="desc">logo</string>
     <string name="login">LOGIN</string>
     <string name="username">username</string>
@@ -15,4 +15,6 @@
     <string name="regsitrasi">REGISTRASI</string>
     <string name="email">email</string>
     <string name="buat_akun">Buat Akun</string>
+    <string name="name">Market Plus</string>
+    <string name="search">Search</string>
 </resources>

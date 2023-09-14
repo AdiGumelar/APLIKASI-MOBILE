@@ -1,184 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginPage"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:contentDescription="@string/desc"
+        android:layout_width="92dp"
+        android:layout_height="109dp"
+        app:srcCompat="@drawable/logo"
+        tools:layout_editor_absoluteX="169dp"
+        tools:layout_editor_absoluteY="82dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="82dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="53dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/login"
+        android:textColor="@color/blue"
+        android:textSize="32sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/_icon__profile_circle_"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/grey"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/bg_editteks"
+        android:hint="@string/username"
+        android:inputType="text"
+        android:autofillHints="username"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/baseline_lock_24"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="15sp"
+        android:padding="10dp"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/bg_editteks"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:autofillHints="password"/>
+
+    <Button
+        android:layout_width="135dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="41dp"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/login_small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_pass"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="12.75sp"
+        android:textColor="@color/grey" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/other_option"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:textSize="12.75sp"
+        android:textColor="@color/black"/>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.LoginPage"
-        android:orientation="vertical"
-        android:paddingHorizontal="24dp"
-        android:background="@color/white">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="90dp"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/logo"
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:contentDescription="@string/desc"
-                app:srcCompat="@drawable/logo_2"
-                tools:layout_editor_absoluteX="169dp"
-                tools:layout_editor_absoluteY="82dp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Market Plus"
-                    android:textSize="34sp"
-                    android:fontFamily="@font/poppins_bold"
-                    android:textColor="@color/black">
-                </TextView>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Make Your Life Easy"
-                    android:textSize="16sp"
-                    android:fontFamily="@font/poppins_bold"
-                    android:textColor="@color/black">
-                </TextView>
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="43dp"
-            android:fontFamily="@font/poppins_bold"
-            android:text="@string/login"
-            android:textColor="@color/blue"
-            android:textSize="32sp" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/_icon__profile_circle_"
-            android:drawablePadding="8dp"
-            android:fontFamily="@font/poppins"
-            android:textColor="@color/grey"
-            android:textSize="15sp"
-            android:padding="10dp"
-            android:layout_marginTop="41dp"
-            android:background="@drawable/bg_editteks"
-            android:hint="@string/username"
-            android:inputType="text"
-            android:autofillHints="username"/>
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/baseline_lock_24"
-            android:drawablePadding="8dp"
-            android:fontFamily="@font/poppins"
-            android:textSize="15sp"
-            android:padding="10dp"
-            android:layout_marginTop="41dp"
-            android:background="@drawable/bg_editteks"
-            android:hint="@string/password"
-            android:inputType="textPassword"
-            android:autofillHints="password"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp">
 
         <Button
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/facebook"
+            android:layout_marginEnd="30dp"
+            android:textColor="@color/black" />
+
+        <Button
+            style="@style/Widget.Material3.Button.OutlinedButton.Icon"
             android:layout_width="135dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="41dp"
-            android:backgroundTint="@color/blue"
             android:fontFamily="@font/poppins_semibold"
-            android:text="@string/login_small"
-            android:textColor="@color/white"/>
+            android:text="@string/google"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/forgot_pass"
+            android:text="@string/belum_punya_akun"
             android:layout_gravity="center"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/poppins_semibold"
-            android:textSize="12.75sp"
-            android:textColor="@color/grey" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/other_option"
-            android:layout_gravity="center"
-            android:layout_marginTop="12dp"
             android:fontFamily="@font/poppins_semibold"
             android:textSize="12.75sp"
             android:textColor="@color/black"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/regiser"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center"
-            android:layout_marginTop="20dp">
-
-            <Button
-                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
-                android:layout_width="135dp"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/facebook"
-                android:layout_marginEnd="30dp"
-                android:textColor="@color/black" />
-
-            <Button
-                style="@style/Widget.Material3.Button.OutlinedButton.Icon"
-                android:layout_width="135dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:fontFamily="@font/poppins_semibold"
-                android:text="@string/google"
-                android:textColor="@color/black" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/belum_punya_akun"
-                android:layout_gravity="center"
-                android:fontFamily="@font/poppins_semibold"
-                android:textSize="12.75sp"
-                android:textColor="@color/black"/>
-
-            <TextView
-                android:id="@+id/regiser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/register_small"
-                android:layout_marginStart="4dp"
-                android:layout_gravity="center"
-                android:fontFamily="@font/poppins_semibold"
-                android:textSize="12.75sp"
-                android:textColor="@color/blue"/>
-        </LinearLayout>
+            android:text="@string/register_small"
+            android:layout_marginStart="4dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="12.75sp"
+            android:textColor="@color/blue"/>
     </LinearLayout>
-</ScrollView>
+
+
+</LinearLayout>
