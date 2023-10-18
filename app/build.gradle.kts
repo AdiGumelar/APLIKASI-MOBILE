@@ -1,6 +1,11 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    kotlin("kapt")
+}
+
+kotlin {
+    jvmToolchain(17)
 }
 
 android {
@@ -24,11 +29,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
@@ -46,4 +51,11 @@ dependencies {
     val nav_version = "2.7.2"
     implementation ("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation ("androidx.navigation:navigation-ui-ktx:$nav_version")
+
+    //Room Components
+    implementation ("androidx.room:room-runtime:2.3.0")
+    kapt ("androidx.room:room-compiler:2.3.0")
+    implementation ("androidx.lifecycle:lifecycle-viewmodel:2.4.0")
+    implementation ("androidx.lifecycle:lifecycle-livedata:2.4.0")
+
 }
