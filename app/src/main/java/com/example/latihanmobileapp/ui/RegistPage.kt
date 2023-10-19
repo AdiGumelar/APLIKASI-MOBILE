@@ -32,7 +32,9 @@ class RegistPage : AppCompatActivity() {
             val userDao = MyApp.database.userDao()
             val user = User(nama = nama, email = email, password = password)
 
-            userDao.insertUser(user)
+            CoroutineScope(Dispatchers.IO).launch {
+                userDao.insertUser(user)
+            }
 
             val intent = Intent(this, LoginPage::class.java)
             startActivity(intent)

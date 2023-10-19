@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:name=".UserData.MyApp"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -12,12 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LatihanMobileApp"
         tools:targetApi="31">
-        <activity android:name=".UserData.UserEntity"></activity>
-        <activity android:name=".UserData.AppDatabase"></activity>
-        <activity android:name=".UserData.MyApp"></activity>
-        <activity android:name=".UserData.UserDao"></activity>
         <activity android:name=".ui.RegistPage"></activity>
         <activity android:name=".ui.LoginPage"></activity>
+        <activity android:name=".ui.homePage"></activity>
         <activity
             android:name=".ui.splashScreen"
             android:exported="true">

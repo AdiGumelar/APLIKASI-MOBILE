@@ -65,6 +65,7 @@
         android:textSize="32sp" />
 
     <EditText
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/_icon__profile_circle_"
@@ -80,6 +81,7 @@
         android:autofillHints="username"/>
 
     <EditText
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/baseline_lock_24"
@@ -94,6 +96,7 @@
         android:autofillHints="password"/>
 
     <Button
+        android:id="@+id/loginButton"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
