@@ -24,7 +24,7 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:contentDescription="@string/desc"
-                app:srcCompat="@drawable/logo_2"
+                app:srcCompat="@drawable/logo_hitam"
                 tools:layout_editor_absoluteX="169dp"
                 tools:layout_editor_absoluteY="82dp" />
 

@@ -12,7 +12,7 @@
         android:layout_height="99dp"
         android:layout_marginTop="200dp"
         android:contentDescription="@string/desc"
-        android:src="@drawable/logo_2"
+        android:src="@drawable/logo_hitam"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"

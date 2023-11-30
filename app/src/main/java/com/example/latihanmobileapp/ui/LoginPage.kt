@@ -17,12 +17,11 @@ class LoginPage : AppCompatActivity() {
         val loginButton = findViewById<Button>(R.id.loginButton)
         val namaEditText = findViewById<TextView>(R.id.username)
         val passwordEditText = findViewById<TextView>(R.id.password)
+        val userDao = MyApp.database.userDao()
 
         loginButton.setOnClickListener {
             val username = namaEditText.text.toString()
             val password = passwordEditText.text.toString()
-
-            val userDao = MyApp.database.userDao()
 
             // Memeriksa apakah pengguna dengan username yang sesuai ada di database
             userDao.getUserByUsername(username).observe(this, { user ->
