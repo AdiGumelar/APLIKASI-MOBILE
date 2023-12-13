@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".UserData.MyApp"
         android:allowBackup="true"
@@ -16,6 +18,8 @@
         <activity android:name=".ui.RegistPage"></activity>
         <activity android:name=".ui.LoginPage"></activity>
         <activity android:name=".ui.homePage"></activity>
+        <activity android:name=".Api.MainActivity"></activity>
+        <activity android:name=".ui.rekomendasiPage"></activity>
         <activity
             android:name=".ui.splashScreen"
             android:exported="true">
