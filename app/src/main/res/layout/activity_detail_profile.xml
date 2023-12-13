@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="40dp"
+            android:layout_marginTop="40dp"
+            />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/_icon__profile_circle_"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bambang Sugeni"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="25dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="20dp"
+            android:layout_marginTop="25dp"
+            />
+
+        <TextView
+            android:id="@+id/namaEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/__icon__person_blue"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/grey"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_editteks"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:autofillHints="username"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/__icon__mail_"
+            android:drawablePadding="8dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="15sp"
+            android:padding="10dp"
+
+            android:background="@drawable/bg_editteks"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:autofillHints="emailAddress"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:fontFamily="@font/poppins_semibold"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            />
+
+        <TextView
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawablePadding="8dp"
+            android:fontFamily="@font/poppins"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_editteks"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:autofillHints="password"/>
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/bottom_navigation_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>
