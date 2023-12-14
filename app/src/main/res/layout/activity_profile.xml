@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     >
 
     <LinearLayout
@@ -21,6 +22,7 @@
             android:fontFamily="@font/poppins_bold"
             android:textSize="40dp"
             android:layout_marginTop="40dp"
+            android:textColor="@color/black"
             />
 
         <ImageView
@@ -38,6 +40,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_semibold"
             android:textSize="25dp"
+            android:textColor="@color/black"
             />
 
         <LinearLayout
@@ -45,12 +48,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="40dp"
-            android:layout_marginLeft="30dp">
+            android:layout_marginLeft="30dp"
+            android:id="@+id/profilkamu">
 
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/__icon__person_"
+                android:src="@drawable/__icon__person_blue"
                 android:layout_gravity="center"/>
 
             <TextView
@@ -61,6 +65,7 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:layout_marginLeft="10dp"
                 android:textSize="17dp"
+                android:textColor="@color/black"
                 />
 
             <ImageView
@@ -83,7 +88,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="30dp">
+            android:layout_marginLeft="30dp"
+            android:id="@+id/logout">
 
             <ImageView
                 android:layout_width="30dp"
@@ -99,6 +105,7 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:layout_marginLeft="10dp"
                 android:textSize="17dp"
+                android:textColor="@color/black"
                 />
 
             <ImageView

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.latihanmobileapp.R
+import kotlin.math.log
 
 class profilePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +34,21 @@ class profilePage : AppCompatActivity() {
         // Menangani klik pada tombol Profile
         btnProfile.setOnClickListener {
             val intent = Intent(this, profilePage::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out)
+        }
+
+        val profilekamu : LinearLayout = findViewById(R.id.profilkamu)
+        val logout : LinearLayout = findViewById(R.id.logout)
+
+        profilekamu.setOnClickListener {
+            val intent = Intent(this, detailProfilePage::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out)
+        }
+
+        logout.setOnClickListener {
+            val intent = Intent(this, logoutPage::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out)
         }

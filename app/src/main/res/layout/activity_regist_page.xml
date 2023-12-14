@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -78,6 +79,7 @@
             android:padding="10dp"
             android:layout_marginTop="41dp"
             android:background="@drawable/bg_editteks"
+            android:textColorHint="@color/grey2"
             android:hint="@string/username"
             android:inputType="text"
             android:autofillHints="username"/>
@@ -86,16 +88,18 @@
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/baseline_alternate_email_24"
+            android:drawableStart="@drawable/__icon__mail_black"
             android:drawablePadding="8dp"
             android:fontFamily="@font/poppins"
             android:textSize="15sp"
             android:padding="10dp"
             android:layout_marginTop="41dp"
             android:background="@drawable/bg_editteks"
+            android:textColorHint="@color/grey2"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:autofillHints="emailAddress"/>
+            android:autofillHints="emailAddress"
+            android:textColor="@color/grey"/>
 
         <EditText
             android:id="@+id/passwordEditText"
@@ -110,7 +114,9 @@
             android:background="@drawable/bg_editteks"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:autofillHints="password"/>
+            android:autofillHints="password"
+            android:textColorHint="@color/grey2"
+            android:textColor="@color/grey"/>
 
         <Button
             android:id="@+id/registerButton"
@@ -120,6 +126,7 @@
             android:layout_marginTop="41dp"
             android:backgroundTint="@color/blue"
             android:fontFamily="@font/poppins_semibold"
+            android:textColor="@color/white"
             android:text="@string/buat_akun" />
 
 
@@ -149,7 +156,8 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/poppins_semibold"
                 android:textSize="12.75sp"
-                android:textColor="@color/blue"/>
+                android:textColor="@color/blue"
+                android:textColorHint="@color/grey2"/>
         </LinearLayout>
     </LinearLayout>
-</ScrollView>
+</LinearLayout>

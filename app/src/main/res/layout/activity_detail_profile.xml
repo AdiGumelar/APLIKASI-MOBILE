@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     >
 
     <LinearLayout
@@ -21,6 +22,7 @@
             android:fontFamily="@font/poppins_bold"
             android:textSize="40dp"
             android:layout_marginTop="40dp"
+            android:textColor="@color/black"
             />
 
         <ImageView
@@ -38,6 +40,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="@font/poppins_semibold"
             android:textSize="25dp"
+            android:textColor="@color/black"
             />
 
         <TextView
@@ -47,6 +50,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:textSize="20dp"
             android:layout_marginTop="25dp"
+            android:textColor="@color/black"
             />
 
         <TextView
@@ -72,6 +76,7 @@
             android:fontFamily="@font/poppins_semibold"
             android:textSize="20dp"
             android:layout_marginTop="15dp"
+            android:textColor="@color/black"
             />
 
         <TextView
@@ -97,13 +102,14 @@
             android:fontFamily="@font/poppins_semibold"
             android:textSize="20dp"
             android:layout_marginTop="15dp"
+            android:textColor="@color/black"
             />
 
         <TextView
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/baseline_lock_24"
+            android:drawableStart="@drawable/__icon__padlock_"
             android:drawablePadding="8dp"
             android:fontFamily="@font/poppins"
             android:textSize="15sp"
@@ -112,13 +118,8 @@
             android:background="@drawable/bg_editteks"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:autofillHints="password"/>
+            android:autofillHints="password"
+            android:textColor="@color/black"/>
 
     </LinearLayout>
-
-    <include
-        layout="@layout/bottom_navigation_profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
 </LinearLayout>

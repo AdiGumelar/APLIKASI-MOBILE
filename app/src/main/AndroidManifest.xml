@@ -20,6 +20,8 @@
         <activity android:name=".ui.homePage"></activity>
         <activity android:name=".ui.profilePage"></activity>
         <activity android:name=".ui.rekomendasiPage"></activity>
+        <activity android:name=".ui.detailProfilePage"></activity>
+        <activity android:name=".ui.logoutPage"></activity>
         <activity
             android:name=".ui.splashScreen"
             android:exported="true">

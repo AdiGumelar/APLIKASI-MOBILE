@@ -78,7 +78,8 @@
         android:background="@drawable/bg_editteks"
         android:hint="@string/username"
         android:inputType="text"
-        android:autofillHints="username"/>
+        android:autofillHints="username"
+        android:textColorHint="@color/grey2"/>
 
     <EditText
         android:id="@+id/password"
@@ -89,11 +90,13 @@
         android:fontFamily="@font/poppins"
         android:textSize="15sp"
         android:padding="10dp"
+        android:textColor="@color/grey"
         android:layout_marginTop="41dp"
         android:background="@drawable/bg_editteks"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:autofillHints="password"/>
+        android:autofillHints="password"
+        android:textColorHint="@color/grey2"/>
 
     <Button
         android:id="@+id/loginButton"
@@ -103,6 +106,7 @@
         android:layout_marginTop="41dp"
         android:backgroundTint="@color/blue"
         android:fontFamily="@font/poppins_semibold"
+        android:textColor="@color/white"
         android:text="@string/login_small" />
 
     <TextView

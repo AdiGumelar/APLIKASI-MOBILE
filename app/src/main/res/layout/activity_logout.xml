@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background="@color/black"
     >
 
     <TextView
@@ -12,6 +13,7 @@
         android:text="Apakah anda yakin ingin keluar?"
         android:fontFamily="@font/poppins_semibold"
         android:layout_gravity="center"
+        android:textColor="@color/white"
         />
 
     <LinearLayout
@@ -20,6 +22,7 @@
         android:layout_marginTop="10dp">
 
         <Button
+            android:id="@+id/no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tidak"
@@ -29,10 +32,12 @@
             />
 
         <Button
+            android:id="@+id/yes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blue"
             android:text="Ya"
+            android:textColor="@color/white"
             android:fontFamily="@font/poppins_semibold"
             android:layout_marginLeft="10dp"/>
 

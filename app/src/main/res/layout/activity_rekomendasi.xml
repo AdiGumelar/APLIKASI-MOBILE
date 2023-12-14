@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/white"
     >
 
     <LinearLayout
@@ -15,7 +16,7 @@
 
         <EditText
             android:id="@+id/search_bar"
-            android:layout_width="370dp"
+            android:layout_width="350dp"
             android:layout_height="51dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/custom_input"
@@ -26,6 +27,8 @@
             android:padding="10dp"
             android:textSize="20sp"
             android:layout_gravity="center"
+            android:textColor="@color/grey"
+            android:textColorHint="@color/grey2"
             />
 
         <TextView
@@ -35,6 +38,7 @@
             android:fontFamily="@font/poppins_bold"
             android:textSize="20dp"
             android:layout_marginTop="20dp"
+            android:textColor="@color/black"
             />
 
 
