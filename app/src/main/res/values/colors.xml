@@ -5,4 +5,5 @@
     <color name="blue">#137DCB</color>
     <color name="grey">#5F5B5B</color>
     <color name="grey2">#9C9C9C</color>
+    <color name="card_base">#dddddd</color>
 </resources>

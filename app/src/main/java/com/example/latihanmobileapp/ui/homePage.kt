@@ -6,13 +6,23 @@ import android.content.Intent
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.latihanmobileapp.Api.ApiClient
+import com.example.latihanmobileapp.Api.Product
+import com.example.latihanmobileapp.Api.ProductAdapter
 import com.example.latihanmobileapp.R
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class homePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        var productAdapter: ProductAdapter
         val lihatSemua = findViewById<TextView>(R.id.LihatSemua)
 
         lihatSemua.setOnClickListener(){
@@ -54,5 +64,28 @@ class homePage : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out)
         }
+
+        val recyclerView: RecyclerView = findViewById(R.id.main_container)
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
+        productAdapter = ProductAdapter(emptyList())
+        recyclerView.adapter = productAdapter
+
+        val call = ApiClient.apiService.getProducts()
+
+        call.enqueue(object : Callback<List<Product>> {
+            override fun onResponse(call: Call<List<Product>>, response: Response<List<Product>>) {
+                if (response.isSuccessful) {
+                    val products = response.body()
+                    if (products != null && products.isNotEmpty()) {
+                        productAdapter = ProductAdapter(products)
+                        recyclerView.adapter = productAdapter
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<List<Product>>, t: Throwable) {
+                // Handle failure
+            }
+        })
     }
 }

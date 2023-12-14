@@ -24,7 +24,7 @@ class rekomendasiPage : AppCompatActivity() {
         setContentView(R.layout.activity_rekomendasi)
 
         recyclerView = findViewById(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = GridLayoutManager(this, 2)
         productAdapter = ProductAdapter(emptyList())
         recyclerView.adapter = productAdapter
 
