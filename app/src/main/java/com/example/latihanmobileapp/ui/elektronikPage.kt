@@ -1,7 +1,9 @@
 package com.example.latihanmobileapp.ui
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,20 +18,23 @@ import retrofit2.Response
 
 class elektronikPage : AppCompatActivity(), ProductAdapter.OnProductItemClickListener {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var productAdapter: ProductAdapter
+    private lateinit var recyclerView   : RecyclerView
+    private lateinit var productAdapter : ProductAdapter
+    private lateinit var categoryTitle  : TextView
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_elektronik)
 
-        recyclerView = findViewById(R.id.recyclerView)
-        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView                = findViewById(R.id.recyclerView)
+        recyclerView.layoutManager  = GridLayoutManager(this, 2)
+        categoryTitle               = findViewById(R.id.category_title)
 
-        // You can replace 'electronics' with the specific category you want to retrieve
-        val category = "electronics"
+        val category    = intent.getStringExtra("category") ?: ""
+        val call        = ApiClient.apiService.getProductsByCategory(category)
 
-        val call = ApiClient.apiService.getProductsByCategory(category)
+        categoryTitle.text = "Hasil untuk kategori \"$category\""
 
         call.enqueue(object : Callback<List<Product>> {
             override fun onResponse(call: Call<List<Product>>, response: Response<List<Product>>) {

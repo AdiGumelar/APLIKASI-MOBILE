@@ -8,7 +8,6 @@ interface ApiService {
     @GET("products")
     fun getProducts(): Call<List<Product>>
 
-    // Metode untuk mendapatkan produk berdasarkan kategori
     @GET("products/category/{category}")
     fun getProductsByCategory(@Path("category") category: String): Call<List<Product>>
 }

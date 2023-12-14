@@ -18,4 +18,6 @@
     <string name="name">Market Plus</string>
     <string name="search">Search</string>
     <string name="kategori">Kategori</string>
+    <string name="jewelery">Jewelery</string>
+    <string name="electronic">Electronics</string>
 </resources>

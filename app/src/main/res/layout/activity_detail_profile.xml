@@ -33,6 +33,7 @@
             />
 
         <TextView
+            android:id="@+id/profile_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bambang Sugeni"
@@ -43,31 +44,31 @@
             android:textColor="@color/black"
             />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Username"
-            android:fontFamily="@font/poppins_semibold"
-            android:textSize="20dp"
-            android:layout_marginTop="25dp"
-            android:textColor="@color/black"
-            />
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Username"-->
+<!--            android:fontFamily="@font/poppins_semibold"-->
+<!--            android:textSize="20dp"-->
+<!--            android:layout_marginTop="25dp"-->
+<!--            android:textColor="@color/black"-->
+<!--            />-->
 
-        <TextView
-            android:id="@+id/namaEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawableStart="@drawable/__icon__person_blue"
-            android:drawablePadding="8dp"
-            android:fontFamily="@font/poppins"
-            android:textColor="@color/grey"
-            android:textSize="15sp"
-            android:padding="10dp"
-            android:layout_marginTop="5dp"
-            android:background="@drawable/bg_editteks"
-            android:hint="@string/username"
-            android:inputType="text"
-            android:autofillHints="username"/>
+<!--        <TextView-->
+<!--            android:id="@+id/namaEditText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:drawableStart="@drawable/__icon__person_blue"-->
+<!--            android:drawablePadding="8dp"-->
+<!--            android:fontFamily="@font/poppins"-->
+<!--            android:textColor="@color/grey"-->
+<!--            android:textSize="15sp"-->
+<!--            android:padding="10dp"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:background="@drawable/bg_editteks"-->
+<!--            android:hint="@string/username"-->
+<!--            android:inputType="text"-->
+<!--            android:autofillHints="username"/>-->
 
         <TextView
             android:layout_width="wrap_content"

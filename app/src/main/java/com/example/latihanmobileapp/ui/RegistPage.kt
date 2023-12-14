@@ -1,5 +1,6 @@
 package com.example.latihanmobileapp.ui
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -19,29 +20,30 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class RegistPage : AppCompatActivity() {
+    @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_regist_page)
 
-        val registerButton = findViewById<Button>(R.id.registerButton)
-        val namaEditText = findViewById<EditText>(R.id.namaEditText)
-        val emailEditText = findViewById<EditText>(R.id.emailEditText)
-        val passwordEditText = findViewById<EditText>(R.id.passwordEditText)
+        val registerButton      = findViewById<Button>(R.id.registerButton)
+        val namaEditText        = findViewById<EditText>(R.id.namaEditText)
+        val emailEditText       = findViewById<EditText>(R.id.emailEditText)
+        val passwordEditText    = findViewById<EditText>(R.id.passwordEditText)
 
 
         registerButton.setOnClickListener {
-            val nama = namaEditText.text.toString()
-            val email = emailEditText.text.toString()
-            val password = passwordEditText.text.toString()
+            val nama        = namaEditText.text.toString()
+            val email       = emailEditText.text.toString()
+            val password    = passwordEditText.text.toString()
 
-            val userDao = MyApp.database.userDao()
-            val user = User(nama = nama, email = email, password = password)
+            val userDao     = MyApp.database.userDao()
+            val user        = User(nama = nama, email = email, password = password)
 
             CoroutineScope(Dispatchers.IO).launch {
                 userDao.insertUser(user)
             }
 
-            val intent = Intent(this, LoginPage::class.java)
+            val intent      = Intent(this, LoginPage::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out)
         }
