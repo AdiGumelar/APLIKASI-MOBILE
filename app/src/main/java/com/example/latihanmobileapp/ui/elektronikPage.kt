@@ -1,5 +1,6 @@
 package com.example.latihanmobileapp.ui
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -13,7 +14,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class elektronikPage : AppCompatActivity() {
+class elektronikPage : AppCompatActivity(), ProductAdapter.OnProductItemClickListener {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var productAdapter: ProductAdapter
@@ -35,7 +36,7 @@ class elektronikPage : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val products = response.body()
                     if (products != null) {
-                        productAdapter = ProductAdapter(products)
+                        productAdapter = ProductAdapter(products, this@elektronikPage)
                         recyclerView.adapter = productAdapter
                     }
                 }
@@ -45,5 +46,15 @@ class elektronikPage : AppCompatActivity() {
                 // Handle failure
             }
         })
+    }
+
+    override fun onProductItemClick(product: Product) {
+        val intent = Intent(this, detailProdukPage::class.java)
+        intent.putExtra("productId", product.id)
+        intent.putExtra("productName", product.title)
+        intent.putExtra("productPrice", product.price)
+        intent.putExtra("productDescription", product.description)
+        intent.putExtra("productImage", product.image)
+        startActivity(intent)
     }
 }

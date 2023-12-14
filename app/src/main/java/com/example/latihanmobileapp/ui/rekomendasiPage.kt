@@ -15,7 +15,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class rekomendasiPage : AppCompatActivity() {
+class rekomendasiPage : AppCompatActivity(), ProductAdapter.OnProductItemClickListener {
     private lateinit var recyclerView: RecyclerView
     private lateinit var productAdapter: ProductAdapter
 
@@ -25,7 +25,7 @@ class rekomendasiPage : AppCompatActivity() {
 
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = GridLayoutManager(this, 2)
-        productAdapter = ProductAdapter(emptyList())
+        productAdapter = ProductAdapter(emptyList(), this@rekomendasiPage)
         recyclerView.adapter = productAdapter
 
         val call = ApiClient.apiService.getProducts()
@@ -35,7 +35,7 @@ class rekomendasiPage : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val products = response.body()
                     if (products != null && products.isNotEmpty()) {
-                        productAdapter = ProductAdapter(products)
+                        productAdapter = ProductAdapter(products, this@rekomendasiPage)
                         recyclerView.adapter = productAdapter
                     }
                 }
@@ -71,5 +71,15 @@ class rekomendasiPage : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out)
         }
+    }
+
+    override fun onProductItemClick(product: Product) {
+        val intent = Intent(this, detailProdukPage::class.java)
+        intent.putExtra("productId", product.id)
+        intent.putExtra("productName", product.title)
+        intent.putExtra("productPrice", product.price)
+        intent.putExtra("productDescription", product.description)
+        intent.putExtra("productImage", product.image)
+        startActivity(intent)
     }
 }

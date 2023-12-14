@@ -24,6 +24,7 @@
         <activity android:name=".ui.detailProfilePage"></activity>
         <activity android:name=".ui.logoutPage"></activity>
         <activity android:name=".ui.elektronikPage"></activity>
+        <activity android:name=".ui.detailProdukPage"></activity>
         <activity
             android:name=".ui.splashScreen"
             android:exported="true">
