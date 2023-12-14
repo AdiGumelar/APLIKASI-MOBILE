@@ -46,5 +46,13 @@ class homePage : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out)
         }
+
+        val elektronik : LinearLayout = findViewById(R.id.elektronik)
+
+        elektronik.setOnClickListener {
+            val intent = Intent(this, elektronikPage::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.push_up_in, R.anim.push_up_out)
+        }
     }
 }
