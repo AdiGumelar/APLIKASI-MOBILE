@@ -38,4 +38,8 @@ class ProductAdapter(private val productList: List<Product>) :
     override fun getItemCount(): Int {
         return productList.size
     }
+
+    interface OnProductItemClickListener {
+        fun onProductItemClick(product: Product)
+    }
 }

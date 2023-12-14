@@ -77,7 +77,8 @@ class homePage : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val products = response.body()
                     if (products != null && products.isNotEmpty()) {
-                        productAdapter = ProductAdapter(products)
+                        val limitedProducts = products.take(6)
+                        productAdapter = ProductAdapter(limitedProducts)
                         recyclerView.adapter = productAdapter
                     }
                 }
