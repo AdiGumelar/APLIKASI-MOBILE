@@ -39,7 +39,9 @@
                     android:layout_height="wrap_content"
                     android:text="Nama"
                     android:fontFamily="@font/poppins_semibold"
-                    android:textColor="@color/black"/>
+                    android:textColor="@color/black"
+                    android:ellipsize="end"
+                    android:maxLines="2"/>
 
                 <TextView
                     android:id="@+id/productPriceTextView"
